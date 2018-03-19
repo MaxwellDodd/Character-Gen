@@ -27,7 +27,26 @@ namespace Real_Char_Gen
         
         
         
-
+        private void TurnOffButtons()
+        {
+            O1.Enabled = false;//Turns off buttons so they can't check multiple options
+            O2.Enabled = false;
+            O3.Enabled = false;
+            O3.Enabled = false;
+            O4.Enabled = false;
+            O5.Enabled = false;
+            O6.Enabled = false;
+        }
+        private void TurnOnButtons()
+        {
+            O1.Enabled = true;//Turns back on buttons so you can click them
+            O2.Enabled = true;
+            O3.Enabled = true;
+            O3.Enabled = true;
+            O4.Enabled = true;
+            O5.Enabled = true;
+            O6.Enabled = true;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -53,8 +72,9 @@ namespace Real_Char_Gen
                     LinkStats.IncrementStat(StatIndex.Cha);
                     LinkStats.IncrementStat(StatIndex.Arm);
                     break;
+                
             }
-             
+            TurnOffButtons();
         }
         private void WhenO2Q1Clicked(object sender, MouseEventArgs e)
         {
@@ -77,6 +97,7 @@ namespace Real_Char_Gen
                     LinkStats.IncrementStat(StatIndex.Weapon);
                     break;
             }
+            TurnOffButtons();
         }
         private void WhenO3Q1Clicked(object sender, MouseEventArgs e)
         {
@@ -99,6 +120,7 @@ namespace Real_Char_Gen
                     LinkStats.IncrementStat(StatIndex.Arm);
                     break;
             }
+            TurnOffButtons();
         }
         private void WhenO4Q1Clicked(object sender, MouseEventArgs e)
         {
@@ -121,6 +143,7 @@ namespace Real_Char_Gen
                     LinkStats.IncrementStat(StatIndex.Magic);
                     break;
             }
+            TurnOffButtons();
         }
 
         private void WhenO5Q1Clicked(object sender, MouseEventArgs e)
@@ -168,6 +191,7 @@ namespace Real_Char_Gen
                     break;
                 
             }
+            TurnOffButtons();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -201,10 +225,7 @@ namespace Real_Char_Gen
             O4.Checked = false;
             O5.Checked = false;
             O6.Checked = false;
-            
-            
+            TurnOnButtons();
         }
-
-        
     }
 }

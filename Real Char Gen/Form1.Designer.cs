@@ -41,15 +41,12 @@
             // O1
             // 
             this.O1.AutoSize = true;
-            this.O1.Checked = true;
             this.O1.Location = new System.Drawing.Point(13, 96);
             this.O1.Name = "O1";
             this.O1.Size = new System.Drawing.Size(14, 13);
             this.O1.TabIndex = 0;
-            this.O1.TabStop = true;
             this.O1.UseVisualStyleBackColor = true;
             this.O1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WhenO1Q1Clicked);
-            this.O1.Checked = false;
             // 
             // O2
             // 

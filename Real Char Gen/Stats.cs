@@ -38,9 +38,7 @@ namespace Real_Char_Gen
         }
         public void IncrementStat(StatIndex index)
         {
-            
-            int current = All[(int)index];
-            All[(int)index] = current++;
+            All[(int)index] = All[(int)index] + 1;//Adds one to the stat that is passed to it.
         }
         // Convenience properties to refer to individual stats by name.
         public int Str
@@ -110,8 +108,15 @@ namespace Real_Char_Gen
                     bestValue = value;
                 }
             }
-
             return (StatIndex)bestIndex;//the number in the array of the best stat
+            if (bestIndex == 1)
+            {
+
+            }
+            if (bestIndex == 4)//If it's Wisdom check second best stat.
+            {
+
+            }
         }
 
         public StatIndex BestStatIndex

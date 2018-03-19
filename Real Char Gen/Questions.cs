@@ -50,7 +50,7 @@ namespace Real_Char_Gen
             LinkForm1.O1.Text = "Stand at ht ehelm shouting orders leading the crew.";
             LinkForm1.O2.Text = "Swing from hte masts with sword in hand and slash at the tentacles.";
             LinkForm1.O3.Text = "Stay in the Crow\'s Nest calling out the Kraken\'s location and where it will strike next.";
-            LinkForm1.O4.Text = "Try and scare th eKraken away by blasting it with a fire spell.";
+            LinkForm1.O4.Text = "Try and scare the Kraken away by blasting it with a fire spell.";
             LinkForm1.O5.Text = "Repair the ship below deck so that you don't sink!";
             LinkForm1.O6.Text = "Man the swivel cannon, aiming at the vitals.";
         }
