@@ -31,11 +31,11 @@
             this.O1 = new System.Windows.Forms.RadioButton();
             this.O2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.O3 = new System.Windows.Forms.RadioButton();
             this.O4 = new System.Windows.Forms.RadioButton();
             this.O5 = new System.Windows.Forms.RadioButton();
             this.O6 = new System.Windows.Forms.RadioButton();
+            this.Question = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // O1
@@ -46,6 +46,7 @@
             this.O1.Size = new System.Drawing.Size(14, 13);
             this.O1.TabIndex = 0;
             this.O1.UseVisualStyleBackColor = true;
+            this.O1.CheckedChanged += new System.EventHandler(this.O1_CheckedChanged);
             this.O1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WhenO1Q1Clicked);
             // 
             // O2
@@ -67,15 +68,6 @@
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.NextPage1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(13, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 77);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // O3
             // 
@@ -117,21 +109,31 @@
             this.O6.UseVisualStyleBackColor = true;
             this.O6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WhenO6Q1Clicked);
             // 
+            // Question
+            // 
+            this.Question.Location = new System.Drawing.Point(13, 13);
+            this.Question.Name = "Question";
+            this.Question.Size = new System.Drawing.Size(474, 80);
+            this.Question.TabIndex = 8;
+            this.Question.Text = "label1";
+            this.Question.Click += new System.EventHandler(this.Question_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 558);
+            this.Controls.Add(this.Question);
             this.Controls.Add(this.O6);
             this.Controls.Add(this.O5);
             this.Controls.Add(this.O4);
             this.Controls.Add(this.O3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.O2);
             this.Controls.Add(this.O1);
             this.Name = "Form1";
             this.Text = "Character Sheet Generator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,11 +145,11 @@
         public System.Windows.Forms.RadioButton O1;
         public System.Windows.Forms.RadioButton O2;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.RadioButton O3;
         public System.Windows.Forms.RadioButton O4;
         public System.Windows.Forms.RadioButton O5;
         public System.Windows.Forms.RadioButton O6;
+        public System.Windows.Forms.Label Question;
     }
 }
 
